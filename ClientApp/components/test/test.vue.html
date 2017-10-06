@@ -1,0 +1,38 @@
+<template>
+    <div>
+        <h1>测试</h1>
+        <p>
+            <form>
+                姓名:
+                <input type="text" v-model="Data.name" placeholder="">
+                <br/>
+                性别:
+                <input type="radio" id="man" value="One" v-model="Data.sex">
+                <label for="man">男</label>
+                <input type="radio" id="woman" value="Two" v-model="Data.sex">
+                <label for="woman">女</label>
+                <br/>
+                兴趣:
+                <input type="checkbox" id="book" value="book" v-model="Data.interest">
+                <label for="book">阅读</label>
+                <input type="checkbox" id="swim" value="swim" v-model="Data.interest">
+                <label for="book">阅读</label>
+                <input type="checkbox" id="game" value="game" v-model="Data.interest">
+                <label for="game">游戏</label>
+                <input type="checkbox" id="song" value="song" v-model="Data.interest">
+                <label for="song">唱歌</label>
+                <br/>
+                身份:
+                <select v-model="Data.identity">
+                    <option value="teacher" selected>教师</option>
+                    <option value="doctor" >医生</option>
+                    <option value="lawyer" >律师</option>
+                </select>
+                <button @click.prevent="funSubmit">提交</button>
+            </form>
+
+        </p>
+    </div>
+</template>
+
+<script src="./test.ts"></script>

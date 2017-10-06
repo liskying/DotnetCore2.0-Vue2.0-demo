@@ -1,0 +1,35 @@
+<template>
+    <div>
+        <div>
+            <form>
+                <div class="row">
+                    <div class="col-xs-6">
+                        <input v-model="newItemDescription" class="form-control"
+                            placeholder="事项名...">
+                    </div>
+                    <button v-on:click="addItem($event)" class="btn btn-primary">
+                        添加
+                    </button>
+                    <button v-on:click="btnQuery($event)" class="btn btn-success">
+                        查询
+                    </button>
+                </div>
+            </form>
+        </div>
+        <div>
+            <ul v-if="todos.length">
+                <li v-for="item in todos">                
+                    {{item.description}} – 
+                    <button v-on:click="completeItem(item)" class="btn btn-link">
+                        完成
+                    </button>
+                </li>
+            </ul>
+            <p v-else class="text-info">
+                无数据.
+            </p>
+                
+        </div>
+    </div>
+</template>
+<script src="./todos.ts"></script>
